@@ -137,7 +137,12 @@ pub struct RemoveLiquidity<'info> {
     pub user: Signer<'info>,
 }
 
-
+#[account]
+pub struct Pool {
+    pub token_a_reserve: u64,
+    pub token_b_reserve: u64,
+    pub total_lp_supply: u64,
+}
 
 #[error_code]
 pub enum ErrorCode {
