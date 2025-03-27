@@ -99,7 +99,7 @@ pub mod uniswap_clone {
             (lp_tokens as u128 * pool.token_b_reserve as u128) / pool.total_lp_supply as u64;
 
         // Update reserves and burn LP tokens
-        pool.token_a_reserve -= token_a_withdraw as u64;
+        pool.token_a_reserve -= token_a_withdraw as u128;
         pool.token_b_reserve -= token_b_withdraw as u64;
         pool.total_lp_supply -= lp_tokens;
 
